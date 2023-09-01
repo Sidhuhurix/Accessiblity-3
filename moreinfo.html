@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>more</title>
+    <style>
+
+        /* Style for the <article> element */
+article {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+article h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+article p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Style for the <aside> element */
+aside {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+aside h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #85b5d4;
+    font-weight: bold;
+}
+
+aside ul li a:hover {
+    text-decoration: underline;
+}
+
+form {
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        fieldset {
+            border: 2px solid #bd9595;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #082436;
+            color: rgb(119, 85, 85);
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #29773a;
+        }
+        figcaption{
+            font-weight: bold;
+        }
+        figure {
+            max-width: 100%;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            text-align: center;
+            color: #000000;
+        }
+        
+        header {
+            background-color: #252323;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        a {
+            text-decoration: none;
+            color: #3498db;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .logo {
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        .logo:last-child {
+            margin-right: 0;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Accessiblity test 3</h1>
+        
+        <div class="logo-container">
+
+            <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuO79PSUsH1vAYFKZ2jy5QYHXdC4ZxhSKOqA&usqp=CAU" >
+            <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuO79PSUsH1vAYFKZ2jy5QYHXdC4ZxhSKOqA&usqp=CAU" alt="Logo 2">
+        </div>
+        <nav>
+            <a class="anchor-link" href="moreinfo.html">moreinfo</a>
+            <a href="index.html">Home</a>
+            <a href="poem.html">poem</a>
+
+        </nav>
+    </header>
+    <article>
+        <h1>Travel Tips</h1>
+        <p>Here are some travel tips for your next vacation.</p>
+        <aside>
+            <h2>Related Links</h2>
+            <ul>
+                <li><a href="hotels.html">Findhotels</a></li>
+                <li><a href="restaurants.html">click here</a></li>
+            </ul>
+        </aside>
+    </article>
+    <div id="dynamic-content">
+        <script>
+            document.getElementById('dynamic-content').innerHTML = 'This content is loaded with JavaScript.';
+        </script>
+    </div>
+
+    <noscript>
+        <p>We're sorry, but this website requires JavaScript to function properly.</p>
+    </noscript>
+    <figure>
+        <img src="https://assets.telegraphindia.com/telegraph/2022/Nov/1669460445_wednesday-cms.jpg" alt="Image of Wednesday Adams">
+        <figcaption>Wednesday</figcaption>
+    </figure>
+    <form>
+        <fieldset>
+            <legend>Contact Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <!-- <label for="email">Email:</label> -->
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend> Address</legend>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required><br><br>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required><br><br>
+
+            <label for="zipcode">ZIP Code:</label>
+            <input type="text" id="zipcode" name="zipcode" required><br><br>
+        </fieldset>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <footer>&copy; xdxd</footer>
+</body>
+</html>
