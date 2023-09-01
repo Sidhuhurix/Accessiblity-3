@@ -52,6 +52,7 @@
         p {
             line-height: 1.6;
             color: #666;
+            margin-bottom: 20px;
         }
 
         nav {
@@ -68,9 +69,6 @@
 
         a:hover {
             text-decoration: underline;
-        }
-        p {
-            margin-bottom: 20px;
         }
 
         ul {
@@ -108,77 +106,129 @@
         th {
             background-color: #f2f2f2;
         }
+
         .arti {
             color: #ffffff;
         }
+
         main {
             padding: 2rem;
         }
+
         .artic {
             color: #ffffff;
             line-height: 0.9;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Accessiblity test 3</h1>
+        <h1>Accessibility Test 3</h1>
         
         <div class="logo-container">
-
-            <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuO79PSUsH1vAYFKZ2jy5QYHXdC4ZxhSKOqA&usqp=CAU" >
-            <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuO79PSUsH1vAYFKZ2jy5QYHXdC4ZxhSKOqA&usqp=CAU" alt="Logo 2">
+            <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuO79PSUsH1vAYFKZ2jy5QYHXdC4xhSKOqA&usqp=CAU" alt="Logo 1">
+            <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuO79PSUsH1vAYFKZ2jy5QYHXdC4xhSKOqA&usqp=CAU" alt="Logo 2">
         </div>
         <nav>
-            <a class="anchor-link" href="moreinfo.html">moreinfo</a>
+            <a class="anchor-link" href="moreinfo.html">More Info</a>
             <a href="index.html">Home</a>
-            <a href="poem.html">poem</a>
-
+            <a href="poem.html">Poem</a>
+        </nav>
+        <nav>
+            <div class="dropdown">
+                <a class="anchor-link" href="">Access</a>
+                <div class="dropdown-content">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                    <a href="#">Option 3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a>Good</a>
+                <div class="dropdown-content">
+                    <a href="dr.html">Sidhu</a>
+                    <a href="xd.html">Sano</a>
+                    <a href="xf.html">Satya</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Hello</a>
+                <div class="dropdown-content">
+                    <a href="#">Ananthalakshmi</a>
+                    <a href="#">Thussar</a>
+                    <a href="#">Hema</a>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
-        <h2>Main Content </h2>
+        <h2>Main Content</h2>
         <p>This is the main content of our website. You can add text, images, videos, and other content here.</p>
         <p>Use the <code>&lt;main&gt;</code> element to represent the primary content area of your web page.</p>
     </main>
     <div class="container">
-       
-        <h1>To Do List</h1>
-        <p>Do the following task </p>
+        <h1>To-Do List</h1>
+        <p>Do the following tasks:</p>
         <ul>
             <li>Daily standup</li>
             <li>Knowledge Transfer</li>
-            <li>Developement practise</li>
+            <li>Development Practice</li>
         </ul>
         <ol>
-            <li>fgffgdfgdjufdejfh</li>
-            <li>xzvbznvnvbcnb</li>
-            <li>dhdhhdhdhhdhisduqwojud</li>
+            <li>Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li>
         </ol>
         <article>
             <h1>Introduction</h1>
             <p class="arti">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo earum ullam quibusdam voluptatem voluptate et, hic sapiente minima quidem facere labore ipsam officiis modi cumque fuga, magnam ducimus est dolorem.</p>
-  
         </article>
-
         <h1>Introduction</h1>
         <p class="artic">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo earum ullam quibusdam voluptatem voluptate et, hic sapiente minima quidem facere labore ipsam officiis modi cumque fuga, magnam ducimus est dolorem.</p>
-        
         <blockquote>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus quod quisquam repellendus consequatur earum eos, sit delectus enim.</blockquote>
         <table>
             <thead>
                 <tr>
                     <th>S.no</th>
-                    <th>name</th>
+                    <th>Name</th>
                     <th>Emp Id</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1. </td>
+                    <td>1.</td>
                     <td>Sid</td>
                     <td>C1234</td>
-                    
                 </tr>
                 <tr>
                     <td>2.</td>
@@ -188,11 +238,8 @@
             </tbody>
         </table>
         <address>
-            <p>Contact: <a href="sidhu@hurix.comm">sidhu@hurix.com</a></p>
+            <p>Contact: <a href="mailto:sidhu@hurix.com">sidhu@hurix.com</a></p>
         </address>
-        
     </div>
 </body>
-    
-
-</html>  
+</html>
