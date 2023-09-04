@@ -143,6 +143,7 @@
             padding: 10px;
             text-decoration: none;
             display: block;
+       
         }
 
         .dropdown:hover .dropdown-content {
@@ -160,22 +161,38 @@
             <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuO79PSUsH1vAYFKZ2jy5QYHXdC4xhSKOqA&usqp=CAU" alt="Logo 2">
         </div>
         <nav>
-            <a class="anchor-link" href="moreinfo.html">More Info</a>
-            <a href="index.html">Home</a>
-            <a href="poem.html">Poem</a>
+            <a class="anchor-link" href="moreinfo.html" tabindex="1">More Info</a>
+            <a href="index.html" tabindex="7">Home </a>
+            <a href="poem.html" tabindex="6">Poem</a>
         </nav>
         <nav>
             <div class="dropdown">
                 
             </div>
             <div class="dropdown">
-                <a>Good</a>
+                <a tabindex="2">Good</a>
                 <div class="dropdown-content">
-                    <a href="dr.html">Sidhu</a>
-                    <a href="xd.html">Sano</a>
-                    <a href="xf.html">Satya</a>
+                    <a href="dr.html" tabindex="3">Sidhu</a>
+                    <a href="xd.html" tabindex="5">Sano</a>
+                    <a href="xf.html" tabindex="4">Satya</a>
                 </div>
             </div>
+            <script>
+                 document.addEventListener("DOMContentLoaded", function() {
+        const dropdown = document.querySelector(".dropdown");
+        const dropdownContent = document.querySelector(".dropdown-content");
+
+        dropdown.addEventListener("click", function() {
+            dropdownContent.classList.toggle("show");
+        });
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                dropdownContent.classList.toggle("show");
+            }
+        });
+    });
+            </script>
             
         </nav>
     </header>
@@ -206,7 +223,7 @@
         <blockquote>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus quod quisquam repellendus consequatur earum eos, sit delectus enim.</blockquote>
         <table>
             <thead>
-                <tr>
+                <tr tabindex="8">
                     <th>S.no</th>
                     <th>Name</th>
                     <th>Emp Id</th>
@@ -214,14 +231,14 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>1.</td>
-                    <td>Sid</td>
-                    <td>C1234</td>
+                    <td tabindex="8">1.</td>
+                    <td tabindex="9">Sid</td>
+                    <td tabindex="10">C1234</td>
                 </tr>
                 <tr>
-                    <td>2.</td>
-                    <td>Sano</td>
-                    <td>C4567</td>
+                    <td tabindex="11">2.</td>
+                    <td tabindex="12">Sano</td>
+                    <td tabindex="13">C4567</td>
                 </tr>
             </tbody>
         </table>

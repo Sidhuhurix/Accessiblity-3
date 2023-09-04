@@ -28,7 +28,7 @@
             height: 60px;
             margin-right: 10px;
         }
-          .container {
+        .container {
             width: 80%;
             margin: auto;
             padding: 2rem;
@@ -43,9 +43,10 @@
             margin-bottom: 20px;
             font-weight: b;
         }
-
-        
-
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -57,24 +58,45 @@
             <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuO79PSUsH1vAYFKZ2jy5QYHXdC4xhSKOqA&usqp=CAU" alt="Logo 2">
         </div>
     </header>
-        <div class="container" >
-        <!-- draggable="true"> -->
-            <h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem possimus qui amet, natus consequuntur libero velit voluptates fugit vero dignissimos recusandae officiis ex alias voluptas illo, labore accusamus. Molestias, aliquam.
-                </p>
-              
-                <p>The <abbr title="World Wide Web Consortium">W3C</abbr> sets web standards.</p>
-                <p>This is some <b style="font-weight: bolder;">bold text</b>.</p>
-                <p>This is a <strong>strongly emphasized</strong> text.</p>
-                <bdo dir="rtl">Text to be displayed</bdo>
-                
+    <p></p>
+    <p></p>
+    <div class="button-container">
+        <button id="zoomInButton">Zoom In</button>
+        <button id="zoomOutButton">Zoom Out</button>
+    </div>
+    <div class="container" id="content">
+        <h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem possimus qui amet, natus consequuntur libero velit voluptates fugit vero dignissimos recusandae officiis ex alias voluptas illo, labore accusamus. Molestias, aliquam.
+            </p>
+          
+            <p>The <abbr title="World Wide Web Consortium">W3C</abbr> sets web standards.</p>
+            <p>This is some <b style="font-weight: bolder;">bold text</b>.</p>
+            <p>This is a <strong>strongly emphasized</strong> text.</p>
+            <bdo dir="rtl">Text to be displayed</bdo>
+        </h3>
+    </div>
+    <p></p>
 
+  
+     
+     
+    <script>
+        const content = document.getElementById("content");
+        const zoomInButton = document.getElementById("zoomInButton");
+        const zoomOutButton = document.getElementById("zoomOutButton");
 
-            </h3>
+        zoomInButton.addEventListener("click", () => {
+            const currentFontSize = window.getComputedStyle(content).fontSize;
+            const currentSize = parseFloat(currentFontSize);
+            content.style.fontSize = `${currentSize * 1.2}px`;
+        });
 
-
-
-        </div>
+        zoomOutButton.addEventListener("click", () => {
+            const currentFontSize = window.getComputedStyle(content).fontSize;
+            const currentSize = parseFloat(currentFontSize);
+            content.style.fontSize = `${currentSize / 1.2}px`;
+        });
+    </script>
 </body>
 </html>

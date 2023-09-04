@@ -9,5 +9,31 @@
     <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto rem adipisci, fugiat cupiditate earum mollitia, neque iure molestias similique accusamus facilis et voluptates corrupti vero, quibusdam itaque provident voluptatum enim.
     </p>
+    <button id="increaseFontButton">+ font size</button>
+        <button id="decreaseFontButton"> - font size</button>
+
+        <script>
+            document.getElementById("increaseFontButton").addEventListener("click", function () {
+                adjustFontSize(2);
+            });
+    
+            document.getElementById("decreaseFontButton").addEventListener("click", function () {
+                adjustFontSize(-2);
+            });
+    
+            function adjustFontSize(change) {
+                // Get the current font size of the body element
+                var currentSize = window.getComputedStyle(document.body, null).getPropertyValue('font-size');
+    
+                // Parse the font size as an integer (remove 'px' at the end)
+                var newSize = parseInt(currentSize, 10);
+    
+                // Adjust the font size by the desired change value
+                newSize += change;
+    
+                // Apply the new font size to the body element
+                document.body.style.fontSize = newSize + "px";
+            }
+        </script>
 </body>
 </html>
